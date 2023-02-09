@@ -1,6 +1,6 @@
 <?php
 include_once 'models/Product.php';
-class ProductController {
+class ProductController extends Controller {
     // goi thoi trang danh sach
     public function index() {
         // goi model
@@ -8,12 +8,18 @@ class ProductController {
         // Model thao tac voi CSDL, tra ve controller
         $items = $objProduct->all();
 
-        include_once 'views/products/index.php';
+        // Truyen xuong view
+        $params = [
+            'items' => $items
+
+        ];
+
+        $this->view('products/index.php', $params);
     }
         // Goi toi trang them moi
         public function create(){
             // Goi view
-            include_once 'views/products/create.php';
+            $this->view('products/create.php');
         }
         // Xu ly them moi
         public function store(){

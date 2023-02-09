@@ -1,4 +1,4 @@
-<a href="index.php?controller=product&action=create"> Thêm mới </a>
+<a class="btn btn-primary" href="index.php?controller=product&action=create"> Thêm mới </a>
 <table border="1">
     <thead>
         <tr>
@@ -29,8 +29,8 @@
                 <td><?php echo $row['Anh'];?></td>
                 <td><?php echo $row['mota'];?></td>
                 <td>
-                    <a href="index.php?controller=product&action=edit&id=<?= $row['id'] ;?>">Edit</a> <br>
-                    <a href="index.php?controller=product&action=destroy&id=<?= $row['id'] ;?>">Delete</a>
+                    <a class="btn btn-warning" href="index.php?controller=product&action=edit&id=<?= $row['id'] ;?>">Edit</a> <br>
+                    <a class="btn btn-danger" href="index.php?controller=product&action=destroy&id=<?= $row['id'] ;?>">Delete</a>
                 </td>
             </tr>
         <?php endforeach; ?>
